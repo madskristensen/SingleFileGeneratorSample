@@ -12,7 +12,6 @@
         <Icon guid="ImageCatalogGuid" id="TriggerScript"/>
         <CommandFlag>IconIsMoniker</CommandFlag>
         <CommandFlag>DynamicVisibility</CommandFlag>
-        <CommandFlag>DefaultInvisible</CommandFlag>
         <Strings>
           <ButtonText>Minify File</ButtonText>
         </Strings>
