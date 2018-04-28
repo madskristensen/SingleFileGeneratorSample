@@ -19,13 +19,15 @@ Every time the file with the Custom Tool property is modified, the Single File G
 
 The nested file can be of any type - code, images, etc. - the sky is the limit.
 
+![Nested file](art/code-behind.png)
+
 ## Let's get started
 This example contains 2 components. 
 
 1. A command you can click that will add the Custom Tool property
 2. The Single File Generator C# class
 
-So before we begin, make sure you have created a VSIX project in Visual Studio. [See how here](https://docs.microsoft.com/en-us/visualstudio/extensibility/extensibility-hello-world).
+So before we begin, make sure you have created a VSIX project in Visual Studio. See how to [create a VSIX project](https://docs.microsoft.com/en-us/visualstudio/extensibility/extensibility-hello-world) if you don't already have one ready.
 
 ### Install NuGet package
 The base classes for the Single File Generator are located in the [Microsoft.VisualStudio.TextTemplating.VSHost.15.0](https://www.nuget.org/packages/Microsoft.VisualStudio.TextTemplating.VSHost.15.0/) NuGet package, so go ahead and install that into your VSIX project.
