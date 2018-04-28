@@ -99,6 +99,7 @@ internal sealed class ApplyCustomTool
 
         var commandService = await package.GetServiceAsync((typeof(IMenuCommandService))) as IMenuCommandService;
         var cmdId = new CommandID(_commandSet, _commandId);
+        var cmd = new MenuCommand(OnExecute, cmdId)
         commandService.AddCommand(cmd);
     }
 
