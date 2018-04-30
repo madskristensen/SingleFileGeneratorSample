@@ -72,7 +72,7 @@ public class VSPackage : AsyncPackage
 
 > Note: if you don't have a *Package* class, add one to your project using the Add New Item dialog. The template is called *Visual Studio AsyncPackage* in VS 2017.7
 
-Now the generator is registered, and you can now manually give the Custom Tool property on files the *MinifyCodeGenerator* value.
+Now the generator is registered, and you can now manually give the Custom Tool property on .js files the *MinifyCodeGenerator* value.
 
 That's it. We've now implemented a Single File Generator that minifies JavaScript files.
 
