@@ -60,8 +60,6 @@ That's it, you now have a Single File Generator that writes a .min.js file with 
 ### Registering the generator
 Decorate your *Package* class with the `ProvideCodeGenerator` attribute.
 
-> Note: if you don't have a *Package* class, add one to your project using the Add New Item dialog. The template is called *Visual Studio AsyncPackage* in VS 2017.7
-
 ```c#
 [ProvideCodeGenerator(typeof(MinifyCodeGenerator), nameof(MinifyCodeGenerator), "Minifies JavaScript", true)]
 public class VSPackage : AsyncPackage
@@ -71,6 +69,8 @@ public class VSPackage : AsyncPackage
 ```
 
 [See full Package class in the source](src/VSPackage.cs).
+
+> Note: if you don't have a *Package* class, add one to your project using the Add New Item dialog. The template is called *Visual Studio AsyncPackage* in VS 2017.7
 
 Now the generator is registered, and you can now manually give the Custom Tool property on files the *MinifyCodeGenerator* value.
 
