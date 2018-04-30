@@ -17,11 +17,11 @@ It is also known as a Custom Tool which can be manually set in the properties of
 
 ![Property Grid](art/property-grid.png)
 
-The most well-known examples of exising generators are the ones creating a strongly typed C#/VB nested file for .resx files.
+The most well-known examples of existing generators are the ones creating a strongly typed C#/VB nested file for .resx files.
 
 Every time the file with the Custom Tool property is modified, the Single File Generator will execute to update the nested file. 
 
-The nested file can be of any type - code, images, etc. - the sky is the limit.
+The nested file can be of any type - code, image, etc. - the sky is the limit.
 
 ## Let's get started
 Before we begin, make sure you have created a VSIX project in Visual Studio. See how to [create a VSIX project](https://docs.microsoft.com/en-us/visualstudio/extensibility/extensibility-hello-world) if you don't already have one ready.
@@ -59,6 +59,8 @@ That's it, you now have a Single File Generator that writes a .min.js file with 
 
 ### Registering the generator
 Decorate your *Package* class with the `ProvideCodeGenerator` attribute.
+
+> Note: if you don't have a *Package* class, add one to your project using the Add New Item dialog. The template is called *Visual Studio AsyncPackage* in VS 2017.7
 
 ```c#
 [ProvideCodeGenerator(typeof(MinifyCodeGenerator), nameof(MinifyCodeGenerator), "Minifies JavaScript", true)]
