@@ -34,9 +34,11 @@ namespace SingleFileGeneratorSample
         private static void OnExecute(object sender, EventArgs e)
         {
             ProjectItem item = _dte.SelectedItems.Item(1).ProjectItem;
-            string ext = Path.GetExtension(item?.FileNames[1] ?? "")?.ToLowerInvariant();
 
-            item.Properties.Item("CustomTool").Value = MinifyCodeGenerator.Name;
+            if (item != null)
+            {
+                item.Properties.Item("CustomTool").Value = MinifyCodeGenerator.Name;
+            }
         }
     }
 }
